@@ -1,7 +1,12 @@
 //Brandon Nguyen VaporEngine 2017 - Mode.h
 #pragma once
 
-#include "stdint.h"
+#include <cstdint>
+
+namespace sf
+{
+	class RenderWindow;
+}
 
 namespace ve
 {
@@ -24,7 +29,7 @@ namespace ve
 
 		virtual void HandleInput() = 0;
 		virtual void Update(float dt) = 0;
-		virtual void Draw(float dt) = 0;
+		virtual void Draw(sf::RenderWindow &renderWindow) = 0;
 
 		virtual void Pause() {}
 		virtual void Resume() {}

@@ -1,6 +1,4 @@
-﻿  main.cpp
-  ModeController.cpp
-  Game.cpp
-  Generating Code...
+﻿  MainGameMode.cpp
+e:\development\sfml\vaporengine\source\maingamemode.cpp(31): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
   VaporEngine.vcxproj -> E:\Development\SFML\VaporEngine\x64\Debug\VaporEngine.exe
   VaporEngine.vcxproj -> E:\Development\SFML\VaporEngine\x64\Debug\VaporEngine.pdb (Partial PDB)

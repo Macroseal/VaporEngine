@@ -1,6 +1,8 @@
 //Brandon Nguyen VaporEngine 2017- ModeController.cpp
 #include "ModeController.h"
 
+#include "MainGameMode.h"
+
 namespace ve
 {
 	void ModeController::RequestModePush(ModeType modeType, bool replaceTop /*= false*/)
@@ -51,34 +53,42 @@ namespace ve
 
 	ModeRef ModeController::BuildMode(ModeType modeType) const
 	{
+		ModeRef newModeRef = nullptr;
 		switch (modeType)
 		{
 		case ModeType::MainGame:
-			assert(false && "Not implemented yet");
+			newModeRef = std::make_shared<MainGameMode>();
 			break;
 		default:
 			assert(false && "Invalid ModeType in ModeController::BuildMode");
 			break;
 		}
 
-		return nullptr;
+		assert(newModeRef);
+		return newModeRef;
 	}
 
 	void ModeController::ApplyModePush(ModeType modeType, bool replaceTop)
 	{
 		ModeRef newModeRef = BuildMode(modeType);
 		assert(newModeRef);
-		assert(mModeStack.top());
-		if (newModeRef && mModeStack.top())
+		if (newModeRef)
 		{
-			if (replaceTop)
+			if (!mModeStack.empty())
 			{
-				mModeStack.pop();
+				ModeRef topModeRef = mModeStack.top();
+				assert(topModeRef);
+				if (replaceTop)
+				{
+					mModeStack.pop();
+				}
+				else if(topModeRef)
+				{
+					topModeRef->Pause();
+				}
 			}
-			else
-			{
-				mModeStack.top()->Pause();
-			}
+
+			newModeRef->Init();
 			mModeStack.push(newModeRef);
 		}
 	}

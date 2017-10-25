@@ -3,7 +3,7 @@
 #pragma once
 #include "Mode.h"
 
-#include <SFML/Graphics/Rect.hpp>
+#include <SFML/Graphics/RectangleShape.hpp>
 
 namespace ve
 {
@@ -20,13 +20,13 @@ namespace ve
 
 		void HandleInput() override;
 		void Update(float dt) override;
-		void Draw(float dt) override;
+		void Draw(sf::RenderWindow &renderWindow) override;
 
 		void Pause() override;
 		void Resume() override;
 
 	private:
-		sf::Graphics::rect mPlayerPaddle;
+		sf::RectangleShape mPlayerPaddle;
 
 	};
 }

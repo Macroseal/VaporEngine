@@ -28,6 +28,8 @@ namespace ve
 		sf::Clock &mainClock = mGameDataRef->mMainClock;
 		ModeController &modeController = mGameDataRef->mModeController;
 
+		//Init first game mode
+		modeController.RequestModePush(ModeType::MainGame);
 
 		//Init timers
 		float newTime, frameTime;
@@ -68,6 +70,7 @@ namespace ve
 				mainWindow.close();
 			}
 
+			//Handle active mode input and update gamestate
 			while (accumulator >= kTickTime)
 			{
 				assert(activeModeRef);
@@ -79,15 +82,13 @@ namespace ve
 				accumulator -= kTickTime;
 			}
 
+			//Render active mode
+			mainWindow.clear();
 			assert(activeModeRef);
 			if (activeModeRef)
 			{
-				activeModeRef->Draw(accumulator/kTickTime);
+				activeModeRef->Draw(mainWindow);
 			}
-
-
-			mainWindow.clear();
-			//mMainWindow.draw(shape);
 			mainWindow.display();
 		}
 	}
