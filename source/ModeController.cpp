@@ -40,7 +40,16 @@ namespace ve
 		mRequestQueue.pop();
 	}
 
-	ModeUniqueRef ModeController::BuildMode(ModeType modeType) const
+	ModeRef ModeController::GetActiveMode() const
+	{
+		if (!mModeStack.empty())
+		{
+			return mModeStack.top();
+		}
+		return nullptr;
+	}
+
+	ModeRef ModeController::BuildMode(ModeType modeType) const
 	{
 		switch (modeType)
 		{
@@ -57,10 +66,10 @@ namespace ve
 
 	void ModeController::ApplyModePush(ModeType modeType, bool replaceTop)
 	{
-		ModeUniqueRef newModeUniqueRef = std::move(BuildMode(modeType));
-		assert(newModeUniqueRef);
+		ModeRef newModeRef = BuildMode(modeType);
+		assert(newModeRef);
 		assert(mModeStack.top());
-		if (newModeUniqueRef && mModeStack.top())
+		if (newModeRef && mModeStack.top())
 		{
 			if (replaceTop)
 			{
@@ -70,7 +79,7 @@ namespace ve
 			{
 				mModeStack.top()->Pause();
 			}
-			mModeStack.push(std::move(newModeUniqueRef));
+			mModeStack.push(newModeRef);
 		}
 	}
 

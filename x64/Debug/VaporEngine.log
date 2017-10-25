@@ -1,1 +1,6 @@
-﻿  ModeController.cpp
+﻿  main.cpp
+  ModeController.cpp
+  Game.cpp
+  Generating Code...
+  VaporEngine.vcxproj -> E:\Development\SFML\VaporEngine\x64\Debug\VaporEngine.exe
+  VaporEngine.vcxproj -> E:\Development\SFML\VaporEngine\x64\Debug\VaporEngine.pdb (Partial PDB)

@@ -1,4 +1,4 @@
-//Brandon Nguyen VaporEngine 2017- Mode.h
+//Brandon Nguyen VaporEngine 2017 - Mode.h
 #pragma once
 
 #include "stdint.h"
@@ -21,8 +21,9 @@ namespace ve
 		virtual ~Mode() {};
 
 		virtual void Init() = 0;
+
 		virtual void HandleInput() = 0;
-		virtual void Update() = 0;
+		virtual void Update(float dt) = 0;
 		virtual void Draw(float dt) = 0;
 
 		virtual void Pause() {}

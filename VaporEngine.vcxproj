@@ -18,6 +18,18 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Game.h" />
+    <ClInclude Include="source\MainGameMode.h" />
+    <ClInclude Include="source\Mode.h" />
+    <ClInclude Include="source\ModeController.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Game.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\MainGameMode.cpp" />
+    <ClCompile Include="source\ModeController.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B07E4C53-4F3C-49CC-B38A-D8D71E8C3F9A}</ProjectGuid>
     <RootNamespace>VaporEngine</RootNamespace>
@@ -125,15 +137,6 @@
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="source\main.cpp" />
-    <ClCompile Include="source\ModeController.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Mode.h" />
-    <ClInclude Include="source\Mode.h" />
-    <ClInclude Include="source\ModeController.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

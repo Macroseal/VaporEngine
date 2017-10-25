@@ -1,26 +1,12 @@
-//Brandon Nguyen VaporEngine 2017- Main.cpp
+//Brandon Nguyen VaporEngine 2017- main.cpp
 
-#include <SFML/Graphics.hpp>
+#include "Game.h"
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(500, 500), "VaporEngine");
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
-
-	while (window.isOpen())
-	{
-		sf::Event event;
-		while (window.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-				window.close();
-		}
-
-		window.clear();
-		window.draw(shape);
-		window.display();
-	}
+	//Initialize main game and let it run
+	std::unique_ptr<ve::Game> gameUniqueRef = std::make_unique<ve::Game>(500, 500, "Pong");
+	gameUniqueRef->Run();
 
 	return 0;
 }

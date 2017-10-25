@@ -10,7 +10,7 @@
 
 namespace ve
 {
-	typedef std::unique_ptr<Mode> ModeUniqueRef;
+	typedef std::shared_ptr<Mode> ModeRef;
 
 	class ModeController
 	{
@@ -22,6 +22,7 @@ namespace ve
 		void RequestModePop(ModeType modeType);
 
 		void ProcessStateChanges();
+		ModeRef GetActiveMode() const;
 
 	private:
 
@@ -41,11 +42,11 @@ namespace ve
 			bool mReplaceTop;
 		};
 
-		ModeUniqueRef BuildMode(ModeType modeType) const;
+		ModeRef BuildMode(ModeType modeType) const;
 		void ApplyModePush(ModeType modeType, bool replaceTop);
 		void ApplyModePop(ModeType modeType);
 
 		std::queue<ModeRequestParameters> mRequestQueue;
-		std::stack<ModeUniqueRef> mModeStack;
+		std::stack<ModeRef> mModeStack;
 	};
 }
