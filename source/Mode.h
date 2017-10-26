@@ -14,7 +14,7 @@ namespace ve
 	{
 		None = 0,
 		MainMenu,
-		MainGame,
+		Pong,
 	};
 
 	class Mode

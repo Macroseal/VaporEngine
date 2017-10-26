@@ -19,15 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Game.h" />
-    <ClInclude Include="source\MainGameMode.h" />
+    <ClInclude Include="source\Application.h" />
+    <ClInclude Include="source\PongMode.h" />
     <ClInclude Include="source\Mode.h" />
     <ClInclude Include="source\ModeController.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Game.cpp" />
+    <ClCompile Include="source\Application.cpp" />
     <ClCompile Include="source\main.cpp" />
-    <ClCompile Include="source\MainGameMode.cpp" />
+    <ClCompile Include="source\PongMode.cpp" />
     <ClCompile Include="source\ModeController.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

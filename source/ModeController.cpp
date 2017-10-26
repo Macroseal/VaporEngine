@@ -1,7 +1,7 @@
 //Brandon Nguyen VaporEngine 2017- ModeController.cpp
 #include "ModeController.h"
 
-#include "MainGameMode.h"
+#include "PongMode.h"
 
 namespace ve
 {
@@ -56,8 +56,8 @@ namespace ve
 		ModeRef newModeRef = nullptr;
 		switch (modeType)
 		{
-		case ModeType::MainGame:
-			newModeRef = std::make_shared<MainGameMode>();
+		case ModeType::Pong:
+			newModeRef = std::make_shared<PongMode>();
 			break;
 		default:
 			assert(false && "Invalid ModeType in ModeController::BuildMode");
