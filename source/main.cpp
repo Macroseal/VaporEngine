@@ -1,12 +1,24 @@
 //Brandon Nguyen VaporEngine 2017- main.cpp
 
-#include "Application.h"
+#include <SFML/Graphics.hpp>
 
-int main()
+void main(int argc, char** argv[])
 {
-	//Initialize main game and let it run
-	std::unique_ptr<ve::Application> gameUniqueRef = std::make_unique<ve::Application>(500, 500, "VaporEngine");
-	gameUniqueRef->Run();
+	sf::RenderWindow window(sf::VideoMode(640, 480), "Bouncing mushroom.");
 
-	return 0;
+	while (window.isOpen())
+	{
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+			{
+				window.close();
+			}
+		}
+
+		window.clear(sf::Color(16, 16, 16, 255)); // Dark gray.
+		//Draw stuff here
+		window.display();
+	}
 }

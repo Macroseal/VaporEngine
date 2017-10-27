@@ -1,3 +1,5 @@
-﻿  Application.cpp
+﻿  main.cpp
+  Window.cpp
+  Generating Code...
   VaporEngine.vcxproj -> E:\Development\SFML\VaporEngine\x64\Debug\VaporEngine.exe
   VaporEngine.vcxproj -> E:\Development\SFML\VaporEngine\x64\Debug\VaporEngine.pdb (Partial PDB)

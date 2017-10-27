@@ -19,16 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Application.h" />
-    <ClInclude Include="source\PongMode.h" />
-    <ClInclude Include="source\Mode.h" />
-    <ClInclude Include="source\ModeController.h" />
+    <ClCompile Include="source\Game.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Application.cpp" />
-    <ClCompile Include="source\main.cpp" />
-    <ClCompile Include="source\PongMode.cpp" />
-    <ClCompile Include="source\ModeController.cpp" />
+    <ClInclude Include="source\Game.h" />
+    <ClInclude Include="source\Window.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B07E4C53-4F3C-49CC-B38A-D8D71E8C3F9A}</ProjectGuid>
