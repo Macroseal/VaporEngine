@@ -8,27 +8,27 @@ static constexpr sf::Uint32 kBitsPerPixel = 32;
 
 namespace ve
 {
-	inline Window::Window(const std::string & title, const sf::Vector2u & size)
+	Window::Window(const std::string & title, const sf::Vector2u & size)
 	{
 		Setup(title, size);
 	}
 	
-	inline Window::~Window()
+	Window::~Window()
 	{
 		Destroy();
 	}
 
-	inline void Window::BeginDraw()
+	void Window::BeginDraw()
 	{
 		mWindow.clear(sf::Color::Black);
 	}
 
-	inline void Window::Draw(sf::Drawable & drawable)
+	void Window::Draw(sf::Drawable & drawable)
 	{
 		mWindow.draw(drawable);
 	}
 
-	inline void Window::EndDraw()
+	void Window::EndDraw()
 	{
 		mWindow.display();
 	}

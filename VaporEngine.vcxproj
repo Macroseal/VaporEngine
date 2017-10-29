@@ -19,13 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Game.cpp" />
-    <ClCompile Include="source\main.cpp" />
-    <ClCompile Include="source\Window.cpp" />
+    <ClCompile Include="source\Engine\Game.cpp" />
+    <ClCompile Include="source\Engine\main.cpp" />
+    <ClCompile Include="source\Engine\Window.cpp" />
+    <ClCompile Include="source\Snake\Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Game.h" />
-    <ClInclude Include="source\Window.h" />
+    <ClInclude Include="source\Engine\Game.h" />
+    <ClInclude Include="source\Engine\Window.h" />
+    <ClInclude Include="source\Snake\Snake.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B07E4C53-4F3C-49CC-B38A-D8D71E8C3F9A}</ProjectGuid>
