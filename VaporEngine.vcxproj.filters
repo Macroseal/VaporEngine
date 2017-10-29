@@ -19,30 +19,36 @@
     <Filter Include="Header Files\Engine">
       <UniqueIdentifier>{f7b64108-f250-4eb6-9c0b-034d8f109f38}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Snake">
+      <UniqueIdentifier>{200bdf00-6cda-451b-a36b-64b52190e04a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Snake">
+      <UniqueIdentifier>{a72f6b4c-1e26-4261-b4cc-678d9df2c8c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Engine\Game.cpp">
+    <ClCompile Include="src\Engine\Game.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="source\Engine\main.cpp">
+    <ClCompile Include="src\Engine\main.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="source\Engine\Window.cpp">
+    <ClCompile Include="src\Engine\Window.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="source\Snake\Snake.cpp">
-      <Filter>Source Files\Engine</Filter>
+    <ClCompile Include="src\Snake\Snake.cpp">
+      <Filter>Source Files\Snake</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Engine\Game.h">
+    <ClInclude Include="src\Engine\Game.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="source\Engine\Window.h">
+    <ClInclude Include="src\Engine\Window.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="source\Snake\Snake.h">
-      <Filter>Header Files\Engine</Filter>
+    <ClInclude Include="src\Snake\Snake.h">
+      <Filter>Header Files\Snake</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
