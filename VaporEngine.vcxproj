@@ -21,12 +21,14 @@
   <ItemGroup>
     <ClCompile Include="src\Engine\Game.cpp" />
     <ClCompile Include="src\Engine\main.cpp" />
+    <ClCompile Include="src\Engine\TextBox.cpp" />
     <ClCompile Include="src\Engine\Window.cpp" />
     <ClCompile Include="src\Snake\Snake.cpp" />
     <ClCompile Include="src\Snake\World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Engine\Game.h" />
+    <ClInclude Include="src\Engine\TextBox.h" />
     <ClInclude Include="src\Engine\Window.h" />
     <ClInclude Include="src\Snake\Snake.h" />
     <ClInclude Include="src\Snake\World.h" />
