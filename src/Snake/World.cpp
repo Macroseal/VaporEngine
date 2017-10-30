@@ -25,7 +25,8 @@ namespace Snake
 		mPickupShape.setFillColor(sf::Color::Red);
 		mPickupShape.setRadius(kTileSize *0.5f);
 
-		//Init score text
+		//Init score and score text
+		mScore = 0;
 		mScoreFont.loadFromFile(kFontPath);
 		mScoreText.setFont(mScoreFont);
 		mScoreText.setPosition({ 10, 10 });
