@@ -5,10 +5,9 @@
 void main(int argc, char** argv[])
 {
 	ve::Game game;
-
 	while (!game.GetWindow().GetIsDone())
 	{
-		game.HandleInput();
+		game.ProcessInput();
 		game.Update();
 		game.Render();
 		game.RestartClock();

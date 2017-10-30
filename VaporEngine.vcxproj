@@ -23,11 +23,13 @@
     <ClCompile Include="src\Engine\main.cpp" />
     <ClCompile Include="src\Engine\Window.cpp" />
     <ClCompile Include="src\Snake\Snake.cpp" />
+    <ClCompile Include="src\Snake\World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Engine\Game.h" />
     <ClInclude Include="src\Engine\Window.h" />
     <ClInclude Include="src\Snake\Snake.h" />
+    <ClInclude Include="src\Snake\World.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B07E4C53-4F3C-49CC-B38A-D8D71E8C3F9A}</ProjectGuid>

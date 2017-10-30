@@ -2,6 +2,9 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+
+#include "../Snake/World.h"
+
 #include "Window.h"
 
 namespace ve
@@ -12,19 +15,20 @@ namespace ve
 		Game();
 		~Game() {};
 
-		void HandleInput();
+		void ProcessInput();
 		void Update();
 		void Render();
 
-		sf::Time GetElapsed() const { return mClock.getElapsedTime(); }
-		void RestartClock() { mElapsed = mClock.restart(); }
+		void RestartClock() { mElapsed += mClock.restart().asSeconds(); }
 
 		const Window& GetWindow() const { return mWindow; }
 
 	private:
 		Window mWindow;
 		sf::Clock mClock;
-		sf::Time mElapsed;
+		float mElapsed;
+
+		Snake::World mSnakeWorld;
 	};
 
 } //ve

@@ -39,6 +39,9 @@
     <ClCompile Include="src\Snake\Snake.cpp">
       <Filter>Source Files\Snake</Filter>
     </ClCompile>
+    <ClCompile Include="src\Snake\World.cpp">
+      <Filter>Source Files\Snake</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Engine\Game.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
     <ClInclude Include="src\Snake\Snake.h">
+      <Filter>Header Files\Snake</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Snake\World.h">
       <Filter>Header Files\Snake</Filter>
     </ClInclude>
   </ItemGroup>
