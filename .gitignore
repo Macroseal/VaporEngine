@@ -1,2 +1,12 @@
 *.opendb
 *.db
+*.suo
+*.tlog
+*.obj
+*.idb
+*.pdb
+*.lastbuildstate
+*.ilk
+*.log
+*.exe
+*.suo
